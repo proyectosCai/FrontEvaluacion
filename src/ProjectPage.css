@@ -38,11 +38,12 @@
   justify-content: center;
   align-items: center;
   position: fixed;
-  top: 0;
+  top: 10;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: 1050;
+  border-bottom: 25px;
 
 }
 
@@ -52,9 +53,10 @@
   max-width: 800px;
   padding: 40px;
   border-radius: 10px;
-  max-height: 90vh;
+  max-height: 80vh;
   overflow-y: auto;
-  margin-top: 85px;
+  margin: 25px;
+  
   
 }
 
