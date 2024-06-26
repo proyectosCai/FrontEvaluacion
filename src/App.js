@@ -8,6 +8,8 @@ import Grid from './Componentes/Grid';
 import ProjectPage from './Componentes/ProjectPage';
 import BoxPage from './Componentes/BoxPage';
 import GraphsPage from './Pages/GraphsPage';
+import ResultsByFichaPage from './Pages/ResulyByFichaPage';
+import ProjectResultsTablePage from './Pages/ProjectResultsTablePage';
 
 
 
@@ -32,8 +34,9 @@ function App() {
               <Route path="/box/:boxNumber" element={<BoxPage />} />
               <Route path="/box/:boxNumber/project/:projectId" element={<ProjectPage />} />
               <Route path="/graphs" element={<GraphsPage />} />
-            
-          </Routes>
+              <Route path="/results-by-ficha" element={<ResultsByFichaPage/>}/>
+              <Route path="/project-results-table" element={<ProjectResultsTablePage/>}/>
+              </Routes>
         </main>
       </div>
     </div>
