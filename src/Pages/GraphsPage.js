@@ -12,7 +12,6 @@ import {
 } from 'chart.js';
 import { FaMedal } from 'react-icons/fa';
 import '../GraphsPage.css';
-import Navbar from '../Componentes/Navbar';
 
 ChartJS.register(
   CategoryScale,
@@ -25,6 +24,7 @@ ChartJS.register(
 );
 
 function GraphsPage() {
+  const apiUrl = process.env.REACT_APP_API_URL;
   const [data, setData] = useState(null);
   const [topProjects, setTopProjects] = useState({});
   const [topThreeProjects, setTopThreeProjects] = useState([]);
@@ -32,7 +32,7 @@ function GraphsPage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:3000/evento');
+        const response = await fetch(`${apiUrl}/evento`);
         const projectsData = await response.json();
 
         const processedData = processData(projectsData);
@@ -49,7 +49,7 @@ function GraphsPage() {
     };
 
     fetchData();
-  }, []);
+  }, [apiUrl]);
 
   const processData = (projects) => {
     const categories = ['Creatividad', 'RSA', 'PyC', 'EyC'];

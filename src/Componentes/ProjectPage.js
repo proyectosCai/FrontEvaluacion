@@ -15,6 +15,7 @@ function ProjectPage() {
   const [scores, setScores] = useState({});
   const [totalScores, setTotalScores] = useState({});
   const [showThankYou, setShowThankYou] = useState(false);
+  const apiUrl = process.env.REACT_APP_API_URL;
 
 
 
@@ -35,7 +36,7 @@ function ProjectPage() {
     console.log("data: ", evaluationData)
     
     try {
-      const response = await fetch('http://localhost:3000/evento', {
+      const response = await fetch(`${apiUrl}/evento`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -233,16 +234,16 @@ function ProjectPage() {
         <h2>{currentCategory?.name}</h2>
         <select value={evaluator} onChange={(e) => setEvaluator(e.target.value)}>
           <option value="">Evaluador</option>
-          <option value="Evaluador 1">Diana Carolina Vargas</option>
-          <option value="Evaluador 2">Carlos Alejandro Ramírez</option>
-          <option value="Evaluador 3">Christian Zetty</option>
-          <option value="Evaluador 3">Nicky Gómez</option>
-          <option value="Evaluador 3">Lorena Perdomo</option>
-          <option value="Evaluador 3">Mónica Montoya</option>
-          <option value="Evaluador 3">Julian Gómez</option>
-          <option value="Evaluador 3">Andrés Espitia</option>
-          <option value="Evaluador 3">Andrea Cotrini</option>
-          <option value="Evaluador 3">Carolina Gálvez</option>
+          <option value="Diana Carolina Vargas">Diana Carolina Vargas</option>
+          <option value="Carlos Alejandro Ramírez">Carlos Alejandro Ramírez</option>
+          <option value="Christian Zetty">Christian Zetty</option>
+          <option value="Nicky Gómez">Nicky Gómez</option>
+          <option value="Lorena Perdomo">Lorena Perdomo</option>
+          <option value="Mónica Montoya">Mónica Montoya</option>
+          <option value="Julian Gómez">Julian Gómez</option>
+          <option value="Andrés Espitia">Andrés Espitia</option>
+          <option value="Andrea Cotrini">Andrea Cotrini</option>
+          <option value="Carolina Gálvez">Carolina Gálvez</option>
 
           
         </select>
