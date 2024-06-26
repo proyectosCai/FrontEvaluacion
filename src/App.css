@@ -1,0 +1,26 @@
+/* App.css */
+.app {
+  background: radial-gradient( #f8fbf2, #ceff96);
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-container {
+  display: flex;
+  flex-grow: 1;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 50px;
+  margin-left: 250px; /* Ancho del sidebar */
+  margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+  .content {
+    margin-left: 0;
+  }
+}

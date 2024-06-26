@@ -1,0 +1,53 @@
+/* Grid.css */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 30px;
+  }
+  
+  .grid-box {
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    padding: 20px;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .grid-box:hover {
+    background-color: #45a049;
+  }
+  
+  .box-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .nombre {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .ficha {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .grid-box:nth-child(7) {
+    grid-column: 2;
+  }
+  
+  @media (max-width: 768px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .grid-box:nth-child(7) {
+      grid-column: auto;
+    }
+  }

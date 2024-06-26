@@ -1,0 +1,21 @@
+/* BoxPage.css */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .project-box {
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.3s;
+  }
+  
+  .project-box:hover {
+    background-color: #2980b9;
+  }
