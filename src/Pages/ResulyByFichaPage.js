@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../ResultsByFichaPage.css';
+import '../ResultByFichaPage.css';
 
 function ResultsByFichaPage() {
   const [fichaResults, setFichaResults] = useState({});

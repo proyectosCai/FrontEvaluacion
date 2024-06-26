@@ -7,6 +7,7 @@ import '../ProjectPage.css';
 Modal.setAppElement('#root');
 
 function ProjectPage() {
+  
   const { boxNumber, projectId } = useParams();
   const navigate = useNavigate();
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -22,7 +23,6 @@ function ProjectPage() {
   const submitEvaluation = async () => {
     const evaluationData = {
       Nombre: "Proyectos Formativos 2° Trimestre",
-      Fecha: Date.now,
       Proyecto: projectId,
       Ficha:boxNumber,   
       Evaluador: evaluator,
